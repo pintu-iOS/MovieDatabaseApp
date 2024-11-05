@@ -19,7 +19,7 @@ struct FilterSectionHeader: View {
                 .padding(.vertical, 20)
                 .padding(.leading, 16)
             Spacer()
-            Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
+            Image(systemName: isExpanded ? Constant.chevronUp : Constant.chevronDown)
                 .padding(.trailing, 16)
         }
         .background(Color(.systemBackground))

@@ -24,9 +24,9 @@ struct MovieRowView: View {
             VStack(alignment: .leading) {
                 Text(movie.title)
                     .font(.headline)
-                Text("Language: \(movie.language)")
+                Text("\(Constant.languageTitleText) \(movie.language)")
                     .font(.subheadline)
-                Text("Year: \(movie.year)")
+                Text("\(Constant.yearTitleText) \(movie.year)")
                     .font(.subheadline)
             }
         }

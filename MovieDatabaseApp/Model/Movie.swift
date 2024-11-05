@@ -7,6 +7,8 @@
 
 import Foundation
 
+//MARK: Movie Model class
+
 struct Movie: Codable, Identifiable {
     let id = UUID()
     let title, year, rated, released: String

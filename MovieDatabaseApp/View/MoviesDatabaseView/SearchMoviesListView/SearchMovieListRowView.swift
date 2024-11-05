@@ -27,12 +27,12 @@ struct SearchMovieListRowView: View {
                     .font(.headline)
                     .foregroundColor(.gray)
                 
-                Text("Language: \(movie.language)")
+                Text("\(Constant.languageTitleText) \(movie.language)")
                     .multilineTextAlignment(.leading)
                     .font(.subheadline)
                     .foregroundColor(.gray)
                 
-                Text("Year: \(movie.year.replacingOccurrences(of: "-", with: ""))")
+                Text("\(Constant.yearTitleText) \(movie.year.replacingOccurrences(of: "-", with: ""))")
                     .multilineTextAlignment(.leading)
                     .font(.subheadline)
                     .foregroundColor(.gray)

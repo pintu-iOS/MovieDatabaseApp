@@ -26,13 +26,13 @@ struct MovieDetailsView: View {
                 Text(movie.title)
                     .font(.title)
                     .padding(.bottom, 8)
-                Text("Plot: \(movie.plot)")
-                Text("Director: \(movie.director)")
-                Text("Released: \(movie.released)")
-                Text("Genre: \(movie.genre)")
+                Text("\(Constant.plotTitleText) \(movie.plot)")
+                Text("\(Constant.directorTitleText) \(movie.director)")
+                Text("\(Constant.releasedTitleText) \(movie.released)")
+                Text("\(Constant.genreTitleText) \(movie.genre)")
                 
                 // Custom Rating Selector
-                Picker("Select Rating Source", selection: $selectedRatingSource) {
+                Picker(Constant.selectRatingSource, selection: $selectedRatingSource) {
                     ForEach(movie.ratings.map { $0.source }, id: \.self) { source in
                         Text(source.rawValue)
                     }
@@ -41,7 +41,7 @@ struct MovieDetailsView: View {
                 
                 // Display selected rating value
                 if let ratingValue = movie.ratings.first(where: { $0.source == selectedRatingSource })?.value {
-                    Text("Rating: \(ratingValue)")
+                    Text("\(Constant.ratingTitleText) \(ratingValue)")
                         .font(.title2)
                 }
             }
